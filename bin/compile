@@ -6,5 +6,9 @@ mkdir -p "$1/bin/server"
 cp "bin/nginx-$STACK" "$1/bin/server/nginx"
 echo "-----> nginx-buildpack: Installed nginx to app/bin/server"
 
+# nginx needs this transient log directory before using
+# the log directory you specify in the nginx.conf
+mkdir -p "$1/logs"
+
 exit 0
 
