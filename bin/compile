@@ -2,9 +2,14 @@
 
 set -e
 
+echo "OMG 1"
+
 mkdir -p "$1/bin/server"
+echo "OMG 2"
 cp "bin/nginx-$STACK" "$1/bin/server/nginx"
+echo "OMG 3"
 echo "-----> nginx-buildpack: Installed nginx to app/bin/server"
 
+echo "OMG 4"
 exit 0
 
